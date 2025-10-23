@@ -1,0 +1,163 @@
+{
+  "alterac_pass": {
+    "map_id": 15,
+    "name": "Alterac Pass",
+    "short_name": "AlteracPass",
+    "type": "standard",
+    "sanitized_map_name": "alterac_pass"
+  },
+  "battlefield_of_eternity": {
+    "map_id": 1,
+    "name": "Battlefield of Eternity",
+    "short_name": "BattlefieldOfEternity",
+    "type": "standard",
+    "sanitized_map_name": "battlefield_of_eternity"
+  },
+  "blackhearts_bay": {
+    "map_id": 2,
+    "name": "Blackheart's Bay",
+    "short_name": "BlackheartsBay",
+    "type": "standard",
+    "sanitized_map_name": "blackhearts_bay"
+  },
+  "braxis_holdout": {
+    "map_id": 3,
+    "name": "Braxis Holdout",
+    "short_name": "BraxisHoldout",
+    "type": "standard",
+    "sanitized_map_name": "braxis_holdout"
+  },
+  "braxis_outpost": {
+    "map_id": 21,
+    "name": "Braxis Outpost",
+    "short_name": "BraxisOutpost",
+    "type": "ARAM",
+    "sanitized_map_name": "braxis_outpost"
+  },
+  "checkpoint_hanamura": {
+    "map_id": 22,
+    "name": "Checkpoint: Hanamura",
+    "short_name": "HanamuraPayloadPush",
+    "type": "brawl",
+    "sanitized_map_name": "checkpoint_hanamura"
+  },
+  "cursed_hollow": {
+    "map_id": 4,
+    "name": "Cursed Hollow",
+    "short_name": "CursedHollow",
+    "type": "standard",
+    "sanitized_map_name": "cursed_hollow"
+  },
+  "dragon_shire": {
+    "map_id": 5,
+    "name": "Dragon Shire",
+    "short_name": "DragonShire",
+    "type": "standard",
+    "sanitized_map_name": "dragon_shire"
+  },
+  "escape_from_braxis": {
+    "map_id": 16,
+    "name": "Escape From Braxis",
+    "short_name": "EscapeFromBraxis",
+    "type": "brawl",
+    "sanitized_map_name": "escape_from_braxis"
+  },
+  "escape_from_braxis_heroic": {
+    "map_id": 23,
+    "name": "Escape From Braxis (Heroic)",
+    "short_name": "EscapeFromBraxis(Heroic)",
+    "type": "brawl",
+    "sanitized_map_name": "escape_from_braxis_heroic"
+  },
+  "garden_of_terror": {
+    "map_id": 6,
+    "name": "Garden of Terror",
+    "short_name": "HauntedWoods",
+    "type": "standard",
+    "sanitized_map_name": "garden_of_terror"
+  },
+  "hanamura_temple": {
+    "map_id": 7,
+    "name": "Hanamura Temple",
+    "short_name": "Hanamura",
+    "type": "standard",
+    "sanitized_map_name": "hanamura_temple"
+  },
+  "haunted_mines": {
+    "map_id": 8,
+    "name": "Haunted Mines",
+    "short_name": "HauntedMines",
+    "type": "standard",
+    "sanitized_map_name": "haunted_mines"
+  },
+  "industrial_district": {
+    "map_id": 17,
+    "name": "Industrial District",
+    "short_name": "IndustrialDistrict",
+    "type": "ARAM",
+    "sanitized_map_name": "industrial_district"
+  },
+  "infernal_shrines": {
+    "map_id": 9,
+    "name": "Infernal Shrines",
+    "short_name": "Shrines",
+    "type": "standard",
+    "sanitized_map_name": "infernal_shrines"
+  },
+  "lost_cavern": {
+    "map_id": 18,
+    "name": "Lost Cavern",
+    "short_name": "LostCavern",
+    "type": "ARAM",
+    "sanitized_map_name": "lost_cavern"
+  },
+  "pull_party": {
+    "map_id": 19,
+    "name": "Pull Party",
+    "short_name": "PullParty",
+    "type": "brawl",
+    "sanitized_map_name": "pull_party"
+  },
+  "silver_city": {
+    "map_id": 20,
+    "name": "Silver City",
+    "short_name": "SilverCity",
+    "type": "ARAM",
+    "sanitized_map_name": "silver_city"
+  },
+  "sky_temple": {
+    "map_id": 10,
+    "name": "Sky Temple",
+    "short_name": "ControlPoints",
+    "type": "standard",
+    "sanitized_map_name": "sky_temple"
+  },
+  "tomb_of_the_spider_queen": {
+    "map_id": 11,
+    "name": "Tomb of the Spider Queen",
+    "short_name": "Crypts",
+    "type": "standard",
+    "sanitized_map_name": "tomb_of_the_spider_queen"
+  },
+  "towers_of_doom": {
+    "map_id": 12,
+    "name": "Towers of Doom",
+    "short_name": "TowersOfDoom",
+    "type": "standard",
+    "sanitized_map_name": "towers_of_doom"
+  },
+  "volskaya_foundry": {
+    "map_id": 14,
+    "name": "Volskaya Foundry",
+    "short_name": "Volskaya",
+    "type": "standard",
+    "sanitized_map_name": "volskaya_foundry"
+  },
+  "warhead_junction": {
+    "map_id": 13,
+    "name": "Warhead Junction",
+    "short_name": "Warhead Junction",
+    "type": "standard",
+    "sanitized_map_name": "warhead_junction"
+  }
+}

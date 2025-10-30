@@ -9,8 +9,6 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   colored: false,
 })
-
-// can add :class="`role-${sanitizeName(role)}`" to play around with effects later
 </script>
 
 <template>

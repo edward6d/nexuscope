@@ -1,21 +1,3 @@
-<script lang="ts">
-const BAR_HEIGHT = 30
-const BAR_WIDTH = 3
-const BAR_SPACING = 1
-const AXIS_THICKNESS = 4
-const AXIS_COLOR = 'hsla(221, 14%, 22%, 1)'
-const BAR_HIGHLIGHT_COLOR = 'hsla(270, 53%, 40%, 1)'
-const BAR_HOVER_COLOR = 'hsla(221, 14%, 93%, 1)'
-// const GRADIENT_STOPS = [
-//   { t: 0, h: 358, s: 53, l: 40, a: 1 },
-//   { t: 0.5, h: 48, s: 53, l: 40, a: 1 },
-//   { t: 1.0, h: 133, s: 53, l: 40, a: 1 },
-// ]
-const GRADIENT_STOPS = [
-  { t: 0, h:170, s:93, l:30, a:1},
-]
-</script>
-
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { getGradientColor } from '@/common/util'
@@ -57,10 +39,6 @@ const bins = computed<{ actualNo:number, maxNo:number }>(() => {
     Math.ceil(maxNo * Math.min(props.params.axisSpan,1)))
   return {actualNo, maxNo}
 })
-// const binsNo = computed(() => {
-//   const b = Math.ceil(props.params.binsMax * Math.min(props.params.axisSpan,1))
-//   return Math.max(props.data.length, b) // should never return less bins than elements of props.data
-// })
 const axis = computed<{ length:number, maxLength:number, shift:number }>(() => {
   const length = (bins.value.actualNo - 1) * (props.barWidth + props.barSpacing) + props.barWidth
   const maxLength = (bins.value.maxNo - 1) * (props.barWidth + props.barSpacing) + props.barWidth
@@ -176,22 +154,6 @@ const binAssignment = computed(() => {
         >
           <title>{{ d.label }}</title>
         </rect>
-        <!--
-        <rect x="1" y="5"
-          rx="1" ry="1"
-          width="6" height="30"
-          fill="hsla(348deg, 100%, 70%, 1)"
-          stroke="hsla(348deg, 40%, 30%, 1)" stroke-width="2"/>
-        <rect x="197" y="5"
-          rx="1" ry="1"
-          width="6" height="30"
-          fill="hsla(42deg, 70%, 53%, 1)"
-          stroke="hsla(42deg, 40%, 30%, 1)" stroke-width="2"/>
-        <rect x="393" y="5"
-          rx="1" ry="1"
-          width="6" height="30"
-          fill="hsla(153deg, 53%, 53%, 1)"
-          stroke="hsla(153deg, 40%, 30%, 1)" stroke-width="2"/> -->
       </g>
     </svg>
   </div>

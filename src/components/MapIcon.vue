@@ -6,7 +6,7 @@ interface Props {
   gameMap: string
 }
 
-const { gameMap = '_unknown' } = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), { gameMap: '_unknown', })
 
 </script>
 

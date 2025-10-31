@@ -7,10 +7,10 @@ interface Props {
   hero: string
 }
 
-const {
-  favorite = false,
-  hero = '_unknown',
-} = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  favorite: false,
+  hero: '_unknown',
+})
 </script>
 
 <template>

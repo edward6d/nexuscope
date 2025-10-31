@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { BField, BSwitch } from 'buefy'
+import { BField } from 'buefy'
 import { useSettingsStore } from '@/stores/settings'
 import { ALL_HEROES, getHeroData } from '@/common/heroes'
 import { ALL_STANDARD_MAPS, getMapData } from '@/common/maps'
@@ -10,6 +10,7 @@ import MapHeroesTable from '@/components/MapHeroesTable.vue'
 import MapPickerDropdown from '@/components/MapPickerDropdown.vue'
 import PatchPickerDropdown from '@/components/PatchPickerDropdown.vue'
 import RoleButtons from '@/components/RoleButtons.vue'
+import HeroSetSelect, { FAVORITES_SET_NAME } from '@/components/HeroSetSelect.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -31,10 +32,18 @@ const selectedMap = computed<string>({
 })
 const selectedMinorPatches = ref(new Set(settings.defaultMinorPatches as Set<string>))
 const selectedRoles = ref(new Set<string>())
+const selectedHeroSetName = ref('')
 const favoritesOnly = ref(false)
 
 const filteredHeroes = computed<Set<string>>(() => {
-  const start: string[] = Array.from(favoritesOnly.value? settings.favoriteHeroes : ALL_HEROES)
+  let start: string[]
+  if (!selectedHeroSetName.value) {
+    start = Array.from(ALL_HEROES)
+  } else if (selectedHeroSetName.value === FAVORITES_SET_NAME) {
+    start = Array.from(settings.favoriteHeroes)
+  } else {
+    start = Array.from(settings.customHeroSets.find(o => o.name === selectedHeroSetName.value)!.heroes)
+  }
   const filtered = start.filter((h) =>
     (selectedRoles.value.size === 0 || selectedRoles.value.has(getHeroData(h).role)))
   const s = new Set<string>(filtered)
@@ -50,7 +59,7 @@ const filteredHeroes = computed<Set<string>>(() => {
       <MapPickerDropdown v-model="selectedMap"/>
       <PatchPickerDropdown v-model="selectedMinorPatches"/>
       <RoleButtons v-model="selectedRoles"/>
-      <BSwitch v-model="favoritesOnly" :disabled="!settings.favoriteHeroes">Favorites</BSwitch>
+      <HeroSetSelect v-model="selectedHeroSetName" :allowEmpty="true"/>
     </BField>
     <MapHeroesTable
       :gameMap="selectedMap"
